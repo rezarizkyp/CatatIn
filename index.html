@@ -476,53 +476,8 @@
 
     // Load data dari LocalStorage, jika kosong gunakan data default
     const savedTransactions = localStorage.getItem('catatin_transactions');
-    let transactions = savedTransactions ? JSON.parse(savedTransactions) : [
-      {
-        id: 'tx-1',
-        type: 'income',
-        amount: 7500000,
-        category: 'Gaji',
-        categoryLabel: '💼 Gaji & Upah',
-        desc: 'Gaji Pokok Awal Bulan',
-        datetime: '2026-09-01T08:30'
-      },
-      {
-        id: 'tx-2',
-        type: 'expense',
-        amount: 1750000,
-        category: 'Tempat_Tinggal',
-        categoryLabel: '🏠 Sewa / Kost',
-        desc: 'Sewa Kamar Kost September',
-        datetime: '2026-09-01T10:15'
-      },
-      {
-        id: 'tx-3',
-        type: 'expense',
-        amount: 450000,
-        category: 'Belanja',
-        categoryLabel: '🛒 Belanja Kebutuhan',
-        desc: 'Belanja Mingguan Supermarket',
-        datetime: '2026-09-02T13:40'
-      },
-      {
-        id: 'tx-4',
-        type: 'income',
-        amount: 1850000,
-        category: 'Freelance',
-        categoryLabel: '💻 Freelance / Proyek',
-        desc: 'Pembayaran Desain UI Mobile App',
-        datetime: '2026-09-03T16:20'
-      },
-      {
-        id: 'tx-5',
-        type: 'expense',
-        amount: 90000,
-        category: 'Makanan',
-        categoryLabel: '🍔 Makanan & Minuman',
-        desc: 'Makan Siang & Es Kopi Susu',
-        datetime: '2026-09-04T09:15'
-      }
-    ];
+    let transactions = savedTransactions ? JSON.parse(savedTransactions) : [];
+     
 
     function saveToLocalStorage() {
       localStorage.setItem('catatin_transactions', JSON.stringify(transactions));
